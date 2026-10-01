@@ -27,5 +27,14 @@ public class Main {
         String mode = in.nextLine().trim().toUpperCase();
         System.out.print("Enter starting node number: ");
         int start = in.nextInt();
+
+        if (!mode.equals("BFS") && !mode.equals("DFS")) {
+            System.out.println("Invalid mode. Enter BFS or DFS");
+            return;
+        }
+        if (start < 1 || start > n) {
+            System.out.println("Invalid starting node. Enter a number from 1 to " + n + ".");
+            return;
+        }
     }
 }
