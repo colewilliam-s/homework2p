@@ -25,7 +25,7 @@ public class Main {
         Scanner in = new Scanner(System.in);
         System.out.print("Enter traversal mode (BFS or DFS): ");
         String mode = in.nextLine().trim().toUpperCase();
-        System.out.print("Enter starting node number: ");
+        System.out.print("Enter starting node number (1 - 8): ");
         int start = in.nextInt();
         in.close();
 
