@@ -21,5 +21,11 @@ public class Main {
         adj[6].add(5);
         adj[7].add(3); adj[7].add(8);
         adj[8].add(3); adj[8].add(7);
+
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter traversal mode (BFS or DFS): ");
+        String mode = in.nextLine().trim().toUpperCase();
+        System.out.print("Enter starting node number: ");
+        int start = in.nextInt();
     }
 }
