@@ -36,5 +36,28 @@ public class Main {
             System.out.println("Invalid starting node. Enter a number from 1 to " + n + ".");
             return;
         }
+
+        traverse(adj, start, mode.equals("BFS"));
+    }
+
+    static void traverse(LinkedList<Integer>[] adj, int start, boolean fifo) {
+        boolean[] visited = new boolean[adj.length];
+        Deque<Integer> queue = new ArrayDeque<>();
+
+        queue.addLast(start);
+
+        while (!queue.isEmpty()) {
+            int u = fifo ? queue.removeFirst() : queue.removeLast();
+            if (visited[u]) continue;
+            visited[u] = true;
+            System.out.print(u + " ");
+
+            for (int v : adj[u]) {
+                if (!visited[v]) {
+                    queue.addLast(v);
+                }
+            }
+        }
+        System.out.println();
     }
 }
